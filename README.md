@@ -4,7 +4,7 @@
 
 ## Install
 
-`pip install pyfly-fixed-wing`
+`pip install ...` <- TODO
 
 ## How to use
 
@@ -26,7 +26,7 @@ pid = PIDController(sim.dt)
 pid.set_reference(phi=0.2, theta=0, va=22)
 
 
-rec = simrecorder(500)
+rec = simrecorder(500) #initialize with number of sim steps
 
 for step_i in range(500):
     phi = sim.state["roll"].value
@@ -40,11 +40,11 @@ for step_i in range(500):
     if not success:
         break
     else:
-        rec.savestate(sim.state, step_i)
+        rec.savestate(sim.state, step_i) # record state at current step
 
 
 sim.render(block=True)
-rec.plot()
+rec.plot() #show me the video
 
 ```
 

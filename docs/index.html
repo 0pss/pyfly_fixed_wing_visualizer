@@ -37,7 +37,7 @@ nb_path: "index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><code>pip install pyfly-fixed-wing</code></p>
+<p><code>pip install ...</code> &lt;- TODO</p>
 
 </div>
 </div>
@@ -85,7 +85,7 @@ nb_path: "index.ipynb"
 <span class="n">pid</span><span class="o">.</span><span class="n">set_reference</span><span class="p">(</span><span class="n">phi</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="mi">22</span><span class="p">)</span>
 
 
-<span class="n">rec</span> <span class="o">=</span> <span class="n">simrecorder</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">rec</span> <span class="o">=</span> <span class="n">simrecorder</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span> <span class="c1">#initialize with number of sim steps</span>
 
 <span class="k">for</span> <span class="n">step_i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">500</span><span class="p">):</span>
     <span class="n">phi</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">state</span><span class="p">[</span><span class="s2">&quot;roll&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
@@ -99,11 +99,11 @@ nb_path: "index.ipynb"
     <span class="k">if</span> <span class="ow">not</span> <span class="n">success</span><span class="p">:</span>
         <span class="k">break</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">rec</span><span class="o">.</span><span class="n">savestate</span><span class="p">(</span><span class="n">sim</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="n">step_i</span><span class="p">)</span>
+        <span class="n">rec</span><span class="o">.</span><span class="n">savestate</span><span class="p">(</span><span class="n">sim</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="n">step_i</span><span class="p">)</span> <span class="c1"># record state at current step</span>
 
 
 <span class="n">sim</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">rec</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">rec</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span> <span class="c1">#show me the video</span>
 </pre></div>
 
     </div>
