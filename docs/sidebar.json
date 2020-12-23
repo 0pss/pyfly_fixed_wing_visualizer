@@ -1,10 +1,6 @@
 {
-  "Notebook": {
-    "Export to modules": "/export",
-    "Convert to html": "/export2html",
-    "Show doc": "/showdoc",
-    "Test functions": "/test",
-    "Core functions": "/core",
-    "Command line functions": "/cli"
+  "pyfly_fixed_wing_visualizer": {
+    "Overview": "/",
+    "pyfly_fixed_wing_visualizer": "pyfly_fixed_wing_visualizer.html"
   }
 }
